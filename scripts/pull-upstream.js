@@ -12,7 +12,7 @@ const targetDir = path.resolve(__dirname, '..');
 // Configuration
 const REPO_URL = 'https://github.com/narevai/ai-billing.git';
 const BRANCH = 'main';
-const SOURCE_SUBDIR = 'examples/chatbot-with-billing-polar';
+const SOURCE_SUBDIR = 'examples/chatbot-with-billing-stripe';
 
 async function main() {
   // Create a temporary directory to clone the monorepo
@@ -171,7 +171,7 @@ async function main() {
     updateDependencies(targetPkg.devDependencies);
 
     // Optional: remove private flag or update name
-    targetPkg.name = 'chatbot-with-billing-polar';
+    targetPkg.name = 'chatbot-with-billing-stripe';
     delete targetPkg.private;
 
     await fs.writeFile(
